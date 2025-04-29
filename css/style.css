@@ -1,0 +1,350 @@
+
+:root {
+    --color-primario: #6a1b9a;
+    --color-secundario: #0BB3D9;
+    --color-fondo: #0a0a0a;
+    --color-texto: #ffffff;
+    --color-gris: #666666;
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --fuente-texto: 'Open Sans', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 150px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*  Barra de Navegación */
+.navbar_style {
+    background-color: rgba(11, 179, 217, 0.9);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.navbar_style ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.navbar_style a {
+    color: var(--color-texto);
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar_style a:hover {
+    color: var(--color-primario);
+}
+
+/*  Sección Principal  */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 20px;
+}
+
+.seccion-destacada {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.contenedor-imagen {
+    flex: 1;
+    min-width: 600px;
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.contenido-derecha {
+    flex: 1;
+    padding-top: 30px;
+}
+
+.contenido-derecha h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 2.8rem;
+    color: var(--color-secundario);
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/*  Galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.galeria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+.pagina-secundaria {
+    max-width: 1200px;
+    margin: 100px auto 50px; 
+    padding: 2rem;
+}
+
+.navbar_style {
+    height: 60px; 
+}
+
+.titulo-seccion {
+    margin-top: 2rem; 
+    margin-bottom: 3rem;
+}
+
+
+@media (max-width: 768px) {
+    .pagina-secundaria {
+        margin-top: 80px !important;
+        padding: 1rem;
+    }
+}
+/* Discografia */
+.pagina-secundaria {
+    max-width: 1200px;
+    margin: 100px auto 50px;
+    padding: 2rem;
+}
+
+.contenedor-videos {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Relación 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--color-secundario);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pagina-secundaria {
+        margin-top: 80px;
+        padding: 1rem;
+    }
+    
+    .contenedor-videos {
+        grid-template-columns: 1fr;
+    }
+}
+/* Estilos para galería */
+.galeria-mejorada {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.galeria-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 2px solid var(--color-secundario);
+}
+
+.leyenda-foto {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(11, 179, 217, 0.1);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .galeria-mejorada {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .galeria-item img {
+        height: 300px;
+    }
+}
+/* formulario de contacto */
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+}
+
+.grupo-formulario {
+    margin-bottom: 1.5rem;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-secundario);
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    color: var(--color-texto);
+}
+
+.boton-enviar {
+    background: var(--color-secundario);
+    color: var(--color-texto);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: filter 0.3s ease;
+}
+
+.boton-enviar:hover {
+    filter: brightness(1.1);
+}
+
+.texto-destacado {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .formulario-contacto {
+        padding: 1rem;
+    }
+}
+
+/* Pie de Página */
+.pie-pagina {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-fondo);
+    border-top: 1px solid var(--color-gris);
+    padding: 2rem;
+    text-align: center;
+}
+
+.creditos p {
+    color: var(--color-gris);
+    font-size: 0.8rem;
+    margin: 0.3rem 0;
+}
+
+/* Redes Sociales */
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.redes img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.redes img:hover {
+    transform: scale(0.9);
+    box-shadow: 0 0 12px var(--color-secundario);
+}
+
+/*  Responsive */
+@media (max-width: 768px) {
+    .seccion-destacada {
+        flex-direction: column;
+    }
+    
+    .contenedor-imagen {
+        min-width: unset;
+        width: 100%;
+    }
+    
+    .contenido-derecha h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .navbar_style ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    body {
+        padding-bottom: 200px;
+    }
+}
