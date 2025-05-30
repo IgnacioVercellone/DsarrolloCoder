@@ -226,7 +226,7 @@ li {
 
 .galeria-item {
     position: relative;
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
@@ -380,3 +380,6 @@ li {
         padding-bottom: 200px;
     }
 }
+
+
+
